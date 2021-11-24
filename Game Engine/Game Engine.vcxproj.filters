@@ -16,15 +16,32 @@
     <Filter Include="Source Files\engine">
       <UniqueIdentifier>{91524be7-c28f-43bb-93af-adfab5d45655}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\engine\shader">
+      <UniqueIdentifier>{85e170e5-3198-459a-8eda-423f7759ba8d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\engine\shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="corbat_lib.h">
       <Filter>Source Files\engine</Filter>
     </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Source Files\engine\shader</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertexShader.vert">
+      <Filter>Source Files\engine\shader</Filter>
+    </None>
+    <None Include="fragmentShader.frag">
+      <Filter>Source Files\engine\shader</Filter>
+    </None>
   </ItemGroup>
 </Project>

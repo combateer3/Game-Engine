@@ -54,6 +54,10 @@ int main(void)
 
 	createTriangle();
 
+	//create shader
+	GLuint program = CreateShaderProgram("vertexShader.vert", "fragmentShader.frag");
+	glUseProgram(program);
+
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
