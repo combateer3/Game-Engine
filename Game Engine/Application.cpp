@@ -3,6 +3,19 @@
 
 #include "corbat_lib.h"
 
+//singleton renderer
+Renderer renderer;
+
+float positions[] = {
+		0, 0.5, 0,
+		0.5, 0, 0,
+		0.5, 0.5, 0
+};
+
+unsigned int indices[] = {
+	0, 1, 2
+};
+
 void createTriangle() {
 	float positions[] = {
 		0, 0.5, 0,
@@ -52,11 +65,15 @@ int main(void)
 	//initialize GLEW
 	glewInit();
 
-	createTriangle();
+	//createTriangle();
 
 	//create shader
 	GLuint program = CreateShaderProgram("vertexShader.vert", "fragmentShader.frag");
 	glUseProgram(program);
+
+	Geometry geom(program);
+	geom.SetPositions(positions, 3);
+	geom.SetIndices(indices, 3);
 
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
@@ -64,7 +81,8 @@ int main(void)
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+		//glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+		renderer.Draw(&geom);
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);

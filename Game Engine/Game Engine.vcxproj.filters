@@ -19,6 +19,12 @@
     <Filter Include="Source Files\engine\shader">
       <UniqueIdentifier>{85e170e5-3198-459a-8eda-423f7759ba8d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\engine\geometry">
+      <UniqueIdentifier>{8080b4a2-35af-4340-bab4-621f49115ea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\renderer">
+      <UniqueIdentifier>{c2005efa-bc5b-4998-8d41-5606fd4163ae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -27,6 +33,12 @@
     <ClCompile Include="Shader.cpp">
       <Filter>Source Files\engine\shader</Filter>
     </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>Source Files\engine\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\engine\renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="corbat_lib.h">
@@ -34,6 +46,12 @@
     </ClInclude>
     <ClInclude Include="Shader.h">
       <Filter>Source Files\engine\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>Source Files\engine\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Source Files\engine\renderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
